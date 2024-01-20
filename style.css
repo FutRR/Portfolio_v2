@@ -8,6 +8,7 @@
         transform: translateX(0);
     }
 }
+
 @keyframes slideInLeft{
     from{
         transform: translateX(-1200px);
@@ -22,7 +23,7 @@
 *{
     font-family: 'Comfortaa', sans-serif;
     color: #fff;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body{
@@ -36,7 +37,13 @@ body{
     radial-gradient(at 44% 9%, rgb(92, 230, 161) 0px, transparent 50%),
     radial-gradient(at 10% 9%, rgb(212, 126, 46) 0px, transparent 50%);
 min-height:1200px;
+}
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container{
@@ -171,6 +178,16 @@ li a:hover{
     transform: scale(1.2);
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px){
+    *{
+        overflow-y: hidden;
+    }
 
+    .sub_container{
+        width: 70%;
+    }
+    .sub_container2{
+        width: 65%;
+    }
 
-@media screen and (max-width:768px) and (min-width: 320px){}
+}
