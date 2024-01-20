@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @keyframes slideInUp{
     from{
-        transform: translateY(-900px);
+        transform: translateX(1200px);
     }
 
     to{
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 @keyframes slideInLeft{
     from{
-        transform: translateX(-900px);
+        transform: translateX(-1200px);
     }
 
     to{
@@ -22,7 +22,7 @@
 *{
     font-family: 'Comfortaa', sans-serif;
     color: #fff;
-    overflow-y: clip;
+    overflow-x: hidden;
 }
 
 body{
@@ -47,27 +47,35 @@ min-height:1200px;
 
 .sub_container{
     width: auto;
-    height: 70%;
+    min-height: 100%;
     background-color: rgba(0, 0,  0, 0.56);
-    border-radius: 16px;
     padding: 15px;
     margin-top: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
 }
 
 .container2{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     animation: slideInLeft 1s ease-in-out 0s;
 }
 
 .sub_container2{
     width: 500px;
-    height: 200px;
     background-color: rgba(0, 0,  0, 0.56);
-    border-radius: 16px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     padding: 15px;
     margin: 50px;
+}
+
+.sub_container2 h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -75,18 +83,24 @@ min-height:1200px;
     font-size: 30px;
     font-weight: 600;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 ul{
     list-style-type: none;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 li a{
     margin-right: 20px;
+    text-decoration: none;
 }
+
+li a:hover{
+    text-decoration: underline;
+}
+
 
 .image_wrapper{
     display: flex;
@@ -108,32 +122,55 @@ li a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 50px;
+    padding: 20px;
 }
 
 .icon_wrapper .img1{
     display: flex;
     justify-content: flex-start;
     width: 100px;
+    transition: transform .2s;
+}
+
+.icon_wrapper .img1:hover{
+    transform: scale(1.2);
 }
 
 .icon_wrapper .img2{
     display: flex;
     justify-content: flex-start;
     width: 100px;
+    transition: transform .2s;
 }
+
+.icon_wrapper .img2:hover{
+    transform: scale(1.2);
+}
+
 
 .icon_wrapper .img3{
     display: flex;
     justify-content: flex-start;
     width: 100px;
+    transition: transform .2s;
 }
+
+.icon_wrapper .img3:hover{
+    transform: scale(1.2);
+}
+
 
 .icon_wrapper .img4{
     display: flex;
     justify-content: flex-start;
     width: 100px;
+    transition: transform .2s;
 }
+
+.icon_wrapper .img4:hover{
+    transform: scale(1.2);
+}
+
 
 
 @media screen and (max-width:768px) and (min-width: 320px){}
