@@ -47,7 +47,9 @@ body{
     radial-gradient(at 20% 98%, rgb(56, 206, 144) 0px, transparent 50%),
     radial-gradient(at 44% 9%, rgb(92, 230, 161) 0px, transparent 50%),
     radial-gradient(at 10% 9%, rgb(212, 126, 46) 0px, transparent 50%);
-min-height:1200px;
+    min-height:auto;
+    margin: 0;
+    padding: 0;
 }
 
 body::-webkit-scrollbar{
@@ -56,7 +58,6 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar-track{
     background: black;
-    
 }
 
 body::-webkit-scrollbar-thumb{
@@ -150,6 +151,7 @@ li a:hover{
 
 .image_wrapper a{
     position: absolute;
+    text-decoration: none;
     bottom: 20px;
     right: 0;
     font-size: .8rem;
@@ -178,12 +180,6 @@ li a:hover{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
-}
-
-.sub_container2 h2:hover{
-    text-decoration: underline;
-    text-decoration-thickness: .5px;
-    text-underline-offset: 3px;
 }
 
 /* SKills Icons */
@@ -253,7 +249,6 @@ li a:hover{
 
 .btn{
     text-decoration: none;
-    background-color: transparent;
     background-color: var(--container-color);
     padding: 10px 20px;
     margin: 1rem 1.5rem;
@@ -290,6 +285,10 @@ li a:hover{
         width: 70%;
     }
 
+    .image_wrapper a{
+        font-size: .7rem;
+    }
+
     .icon_wrapper img{
         margin-right: .25rem;
         margin-left: .25rem;
@@ -297,26 +296,19 @@ li a:hover{
     }
 
     .navbar{
-        background-color: black;
         position: sticky;
         display: flex;
         flex-direction: column;
-        top: 0;
-        padding: 0;
-        margin: 0;
-        z-index: 1;
+        top: 1rem;
         width: 100%;
-        ;
+        
     }
 
     ul{
         list-style-type: none;
-        display: flex;
         padding: 0;
         margin: 0;
         text-align: center;
-        justify-content: center;
-        align-items: center;
         align-self: center;
     }
 
