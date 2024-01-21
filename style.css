@@ -3,24 +3,38 @@
     from{
         transform: translateX(-1600px);
     }
-
     to{
         transform: translateX(0);
     }
 }
+@keyframes slideInRight{
+    from{
+        transform: translateX(1600px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes slideInUp{
+    from{
+        transform: translateY(600px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}  
+
 
 :root{
     --font-color: #fff;
     --container-color: rgba(0, 0,  0, 0.56);
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 *{
     font-family: 'Comfortaa', sans-serif;
     color: var(--font-color);
+    scroll-behavior: smooth;
+    overflow-x: hidden;   
 }
 
 body{
@@ -55,31 +69,6 @@ body::-webkit-scrollbar-thumb{
     height: 100%;
 }
 
-/* About Me */
-
-#container{
-    display: flex;
-    justify-content: center;
-    animation: slideInLeft 1s ease-out 0s;
-}
-
-.sub_container{
-    width: auto;
-    min-height: 100%;
-    background-color: var(--container-color);
-    padding: 15px;
-    margin: 50px 25px 25px 25px;
-    border-radius: 15px;
-}
-
-.logo{
-    font-size: 30px;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
 /* Navigation Bar */
 
 .navbar{
@@ -106,7 +95,7 @@ li a{
     margin: 1rem 1rem;
     text-decoration: none;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
 }
 
@@ -117,6 +106,37 @@ li a:hover{
     text-underline-offset: 3px;
 }
 
+/* About Me */
+
+#container{
+    display: flex;
+    justify-content: center;
+    animation: slideInLeft 800ms ease-out 0s;
+}
+
+.sub_container{
+    width: auto;
+    min-height: 100%;
+    background-color: var(--container-color);
+    padding: 15px;
+    margin: 50px 25px 25px 25px;
+    border-radius: 15px;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.about{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
 /* Image */
 
 .image_wrapper{
@@ -125,14 +145,14 @@ li a:hover{
 }
 
 .image_wrapper img{
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .image_wrapper a{
     position: absolute;
     bottom: 20px;
     right: 0;
-    font-size: 12px;
+    font-size: .8rem;
 }
 
 /* SKills */
@@ -141,7 +161,7 @@ li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: slideInLeft 1s ease-out 0s;
+    animation: slideInRight 800ms ease-out 0s;
 }
 
 .sub_container2{
@@ -156,7 +176,7 @@ li a:hover{
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 20;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -179,7 +199,7 @@ li a:hover{
     display: flex;
     justify-content: flex-start;
     width: 100px;
-    transition: transform .2s;
+    transition: transform 200ms;
 }
 
 .icon_wrapper .img1:hover{
@@ -190,7 +210,7 @@ li a:hover{
     display: flex;
     justify-content: flex-start;
     width: 100px;
-    transition: transform .2s;
+    transition: transform 200ms;
 }
 
 .icon_wrapper .img2:hover{
@@ -201,7 +221,7 @@ li a:hover{
     display: flex;
     justify-content: flex-start;
     width: 100px;
-    transition: transform .2s;
+    transition: transform 200ms;
 }
 
 .icon_wrapper .img3:hover{
@@ -213,7 +233,7 @@ li a:hover{
     display: flex;
     justify-content: flex-start;
     width: 100px;
-    transition: transform .2s;
+    transition: transform 200ms;
 }
 
 .icon_wrapper .img4:hover{
@@ -223,7 +243,7 @@ li a:hover{
 /* Contact & Download Buttons */
 
 #btn_container{
-    animation: slideInLeft 1s ease-out;
+    animation: slideInLeft 800ms ease-out;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -239,13 +259,13 @@ li a:hover{
     margin: 1rem 1.5rem;
     border-radius: 5000px;
     border-color: #fff;
-    border-width: 2px;
     transition: transform 300ms;
-    text-align: center;
+    font-size: 1rem;
 }
 
 .btn:hover{
     transform: scale(1.5);
+    border: 1px solid white
 }
 
 /* Small Screens */
